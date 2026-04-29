@@ -1,127 +1,164 @@
-<!DOCTYPE html>
-<html>
+            <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Laikinoi Tours and Travel</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laikinoi Tours & Travel</title>
 
-<body style="font-family:Arial; margin:0;">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-<!-- HEADER -->
-<div style="background:#111; padding:15px; display:flex; align-items:center;">
-    <img src="profile.jpg" 
-         style="width:60px; height:60px; border-radius:50%; margin-right:10px;">
-    
-    <h2 style="color:white; margin:0;">Laikinoi Tours and Travel</h2>
-</div>
+body {
+    line-height: 1.6;
+}
 
-<!-- HERO -->
-<div style="padding:20px; text-align:center;">
-    <h1>Welcome to Laikinoi Tours</h1>
-    <p>Your trusted safari partner in Maasai Mara</p>
-</div>
-
-<!-- PROFILE IMAGE -->
-<div style="text-align:center;">
-    <img src="profile.jpg" 
-         style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
-</div>
-
-</body>
-</html>
-<!-- HERO SECTION -->
-<div style="
-    background: url('background.jpg') center/cover no-repeat;
-    height: 90vh;
+/* NAVBAR */
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1546182990-dffeafbe841d') center/cover no-repeat;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-">
+    padding: 20px;
+}
 
-    <!-- Dark overlay -->
-    <div style="
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:90vh;
-        background:rgba(0,0,0,0.4);
-    "></div>
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
 
-    <!-- Content -->
-    <div style="position:relative; z-index:2;">
+.hero p {
+    margin-bottom: 20px;
+}
 
-        <!-- Profile Image -->
-        <img src="elephant.jpg" 
-             style="
-                width:120px;
-                height:120px;
-                border-radius:50%;
-                object-fit:cover;
-                border:3px solid white;
-                margin-bottom:15px;
-             ">
+.btn {
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-        <!-- Title -->
-        <h1 style="font-size:28px; margin:10px 0;">
-            Laikinoi Tours and Travel
-        </h1>
+/* SECTION */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        <!-- Subtitle -->
-        <p style="font-size:14px; margin-bottom:20px;">
-            Your trusted safari partner in Kenya
-        </p>
+/* PACKAGES */
+.packages {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        <!-- Button -->
-        <a href="https://wa.me/254XXXXXXXXX" 
-           style="
-            background:#25D366;
-            color:white;
-            padding:12px 20px;
-            text-decoration:none;
-            border-radius:5px;
-            font-size:14px;
-           ">
-           Book on WhatsApp
-        </a>
+.card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-    </div>
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
+.card-content {
+    padding: 15px;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h1>Laikinoi Tours</h1>
 </div>
 
-<!-- SAFARI PACKAGES -->
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h2>Your Trusted Safari Guide in Maasai Mara</h2>
+        <p>Experience wildlife, culture, and adventure</p>
+        <a href="https://wa.me/254712345678" class="btn">Book via WhatsApp</a>
+    </div>
+</div>
+
+<!-- PACKAGES -->
 <div class="section">
     <h2>Our Safari Packages</h2>
 
-    <div class="cards">
+    <div class="packages">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d">
-            <h3>Maasai Mara Safari</h3>
-            <p>3–5 days to see the Big Five and Great Migration.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Lion_waiting_in_Namibia.jpg">
+            <div class="card-content">
+                <h3>Maasai Mara Safari</h3>
+                <p>3–5 days exploring the Big Five and Great Migration.</p>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-            <h3>Amboseli Safari</h3>
-            <p>Elephants with Mt. Kilimanjaro views.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg">
+            <div class="card-content">
+                <h3>Elephant Experience</h3>
+                <p>Track elephants and learn conservation stories.</p>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801">
-            <h3>Tsavo Safari</h3>
-            <p>Explore red elephants and wild landscapes.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Maasai_warriors.jpg">
+            <div class="card-content">
+                <h3>Cultural Tours</h3>
+                <p>Visit Maasai villages and experience traditions.</p>
+            </div>
         </div>
 
     </div>
 </div>
 
 <!-- FOOTER -->
-<footer>
-    <p>© 2026 Laikinoi Tours and Travel</p>
-</footer>
+<div class="footer">
+    <p>© 2026 Laikinoi Tours & Travel</p>
+</div>
 
 </body>
 </html>
